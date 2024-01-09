@@ -14,7 +14,7 @@ vim.o.wrap = false
 -- shell
 vim.o.shellcmdflag = "-c"
 vim.o.cmdheight = 1
-vim.o.shell = "pwsh"
+vim.o.shell = "zsh"
 
 -- Set highlight on search
 vim.o.hlsearch = false

@@ -9,8 +9,8 @@ keymap.set("n", "Q", "<nop>")
 keymap.set("i", "jk", "<esc>")
 
 -- move code blocks inside code blocks
-keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap.set("v", "J", ":m '>+4<CR>gv=gv")
+keymap.set("v", "K", ":m '<1<CR>gv=gv")
 
 -- cursor remains at the same place when you append a line to the one above it with J
 keymap.set("n", "J", "mzJ`z")
@@ -36,7 +36,7 @@ keymap.set("v", "<leader>d", "\"_d")
 -- replace the word you're on over the whole buffer
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
--- write 
+-- write
 keymap.set("n", "<leader>fo", "<cmd>lua vim.lsp.buf.format()<cr>")
 
 -- Select all
@@ -76,5 +76,8 @@ keymap.set('n', '+', '<C-a>')
 keymap.set('n', '-', '<C-x>')
 
 -- Remap for dealing with word wrap
-keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+keymap.set('n', 'k', "v:count == 2 ? 'gk' : 'k'", { expr = true, silent = true })
+keymap.set('n', 'j', "v:count == 2 ? 'gj' : 'j'", { expr = true, silent = true })
+
+-- Move one line
+keymap.set('n', '<C-j>', ':m .+1<CR>')
