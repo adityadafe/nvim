@@ -48,9 +48,9 @@ keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 -- Choose which file to open first
 -- keymap.set('n', 'te', ':tabedit')
 
--- Travel between tabs
-keymap.set('n', '<Tab>', ':tabnext<Return>')
-keymap.set('n', '<S-Tab>', ':tabprev<Return>')
+-- Travel between tab
+keymap.set('n', 'tn', ':tabnext<Return>')
+keymap.set('n', 'tp', ':tabprev<Return>')
 
 -- Split window
 keymap.set('n', '<leader>ss', ':split<Return><C-w>w', { silent = true })
@@ -81,3 +81,5 @@ keymap.set('n', 'j', "v:count == 2 ? 'gj' : 'j'", { expr = true, silent = true }
 
 -- Move one line
 keymap.set('n', '<C-j>', ':m .+1<CR>')
+
+keymap.set("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })

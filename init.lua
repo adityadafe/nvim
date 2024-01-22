@@ -19,6 +19,8 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.g.copilot_no_tab_map = true
+
 -- load plugins using lazy.nvim
 require('lazy').setup('plugins')
 
@@ -166,7 +168,7 @@ mason_lspconfig.setup_handlers {
 }
 
 -- Turn on lsp status information
-require('fidget').setup()
+require('fidget').setup {}
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
