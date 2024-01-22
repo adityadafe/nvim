@@ -82,4 +82,4 @@ keymap.set('n', 'j', "v:count == 2 ? 'gj' : 'j'", { expr = true, silent = true }
 -- Move one line
 keymap.set('n', '<C-j>', ':m .+1<CR>')
 
-keymap.set("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+keymap.set("i", "<C-Y>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
