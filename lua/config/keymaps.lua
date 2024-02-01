@@ -42,6 +42,10 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
+-- miscellaneous
+
+keymap.set("n", "s", "li<BS>")
+
 -- diagnostics
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
